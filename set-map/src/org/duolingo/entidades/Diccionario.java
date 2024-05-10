@@ -17,5 +17,18 @@ public class Diccionario {
             JOptionPane.showMessageDialog(null, "Esta palabra no es valida");
             return;
         }
+
+        String inicial = nuevaPalabra.substring(0, 1);
+        JOptionPane.showMessageDialog(null, inicial);
+
+        if (this.diccionario.containsKey(inicial)) {
+            Set<String> setPalabras = this.diccionario.get(inicial);
+            setPalabras.add(nuevaPalabra);
+            this.diccionario.put(inicial, setPalabras);
+        } else {
+            Set<String> nuevoSet = new HashSet<>();
+            nuevoSet.add(nuevaPalabra);
+            this.diccionario.put(inicial, nuevoSet);
+        }
     }
 }
