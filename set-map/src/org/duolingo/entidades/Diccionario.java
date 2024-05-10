@@ -70,4 +70,18 @@ public class Diccionario {
         }
 
     }
+
+    public void verPalabras() {
+        String letraInicial = JOptionPane.showInputDialog(null, "Dime una inicial");
+
+        if (this.diccionario.containsKey(letraInicial)) {
+            Set<String> setPalabras = this.diccionario.get(letraInicial);
+
+            for (String palabra : setPalabras) {
+                JOptionPane.showMessageDialog(null, palabra);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "No hay palabras almacenadas en esa inicial");
+        }
+    }
 }
