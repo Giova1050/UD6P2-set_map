@@ -31,4 +31,22 @@ public class Diccionario {
             this.diccionario.put(inicial, nuevoSet);
         }
     }
+
+    public void eliminarPalabra() {
+
+        String palabraEliminar = JOptionPane.showInputDialog(null, "Introduce la palabra que quieras eliminar",
+                "Nueva Palabra", 0);
+
+        String inicialEliminar = palabraEliminar.substring(0, 1);
+        if (this.diccionario.containsKey(inicialEliminar)) {
+            Set<String> setPalabras = this.diccionario.get(inicialEliminar);
+            if (setPalabras.remove(palabraEliminar)) {
+                JOptionPane.showMessageDialog(null, "Se ha eliminado la palabra");
+            } else {
+                JOptionPane.showMessageDialog(null, "No existe esta palabra");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Esta inicial no contiene palabras almacenadas");
+        }
+    }
 }
