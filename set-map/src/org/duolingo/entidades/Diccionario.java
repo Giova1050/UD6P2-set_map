@@ -6,6 +6,8 @@ import java.util.Map;
 import java.util.Set;
 import javax.swing.JOptionPane;
 
+import org.duolingo.utilidades.Validador;
+
 public class Diccionario {
     private Map<String, Set<String>> diccionario = new HashMap<>();
 
