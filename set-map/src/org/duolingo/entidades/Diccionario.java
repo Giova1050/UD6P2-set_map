@@ -49,4 +49,18 @@ public class Diccionario {
             JOptionPane.showMessageDialog(null, "Esta inicial no contiene palabras almacenadas");
         }
     }
+
+    public void existePalabra() {
+        String palabraExiste = "";
+
+        String inicialExiste = palabraExiste.substring(0, 1);
+        if (this.diccionario.containsKey(inicialExiste)) {
+            Set<String> setPalabras = this.diccionario.get(inicialExiste);
+            if (setPalabras.contains(palabraExiste)) {
+                JOptionPane.showMessageDialog(null, "La palabra existe");
+            } else {
+                JOptionPane.showMessageDialog(null, "No existe esta palabra");
+            }
+        }
+    }
 }
