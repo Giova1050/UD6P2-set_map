@@ -13,7 +13,7 @@ public class Diccionario {
 
     public void añadirPalabra() {
         String nuevaPalabra = JOptionPane.showInputDialog(null, "Introduce una nueva palabra", "Nueva Palabra", 0);
-        if (!Validador.sanitanizacion(nuevaPalabra)) {
+        if (Validador.sanitanizacion(nuevaPalabra)) {
             JOptionPane.showMessageDialog(null, "Esta palabra es valida");
         } else {
             JOptionPane.showMessageDialog(null, "Esta palabra no es valida");
@@ -87,3 +87,5 @@ public class Diccionario {
         }
     }
 }
+
+
