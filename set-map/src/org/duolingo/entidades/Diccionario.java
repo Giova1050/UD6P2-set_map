@@ -63,4 +63,11 @@ public class Diccionario {
             }
         }
     }
+
+    public void mostrarIniciales() {
+        for (String letra : diccionario.keySet()) {
+            JOptionPane.showMessageDialog(null, letra);
+        }
+
+    }
 }
